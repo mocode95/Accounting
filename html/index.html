@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>pied project</title>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -19,19 +19,24 @@
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
   <!--Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!-- Annimate css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Animate css -->
+  <link rel="stylesheet" href="/lib/WOW-master/css/libs/animate.css" />
 
-  <!-- jQueary script -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+
   <!-- StyleSheet css -->
   <link rel="stylesheet" href="/Css/style.css" />
 </head>
 
 <body>
+  <!-- PreLoader -->
+  <div class="loader">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+
   <header>
     <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
@@ -83,7 +88,7 @@
               Hire us <i class="fas fa-arrow-right"></i>
             </button>
           </div>
-          <div class="col-lg-4 col-md-6 form-group pt-5">
+          <div class="wow bounceInUp col-lg-4 col-md-6 form-group pt-5" data-wow-duration="1s">
             <div class="container bg-light text-dark shadow-lg">
               <div class="form-row d-flex justify-content-left px-2">
                 <h4 class="mt-5 mb-md-4"><span>|</span> Book a consultation!</h4>
@@ -169,9 +174,9 @@
     <section id="about_us" class="my-5 pt-5">
       <div class="container">
         <div class="row d-flex align-items-center">
-          <div id="leftImg" class="col-md-4"></div>
-          <div class="col-md-6 ml-md-5 pl-md-5 pt-md-0 pt-5 ">
-            <h6 class="textMuted">About us</h6>
+          <div id="leftImg" class="col-md-4 wow fadeInUp" data-wow-offset="200" data-wow-duration="2s"></div>
+          <div class=" col-md-6 ml-md-5 pl-md-5 pt-md-0 pt-5 ">
+            <h6 class=" textMuted">About us</h6>
             <h2 class="pt-3">We are innovation & efficiency</h2>
             <h6 class="pt-5 textMuted">
               Now is the winter of our discontent Made glorious summer by this
@@ -194,19 +199,25 @@
       <div id="board" class="container text-center shadow-lg mt-md-5">
         <div class="row d-flex align-items-center">
           <div class="col-md-4 py-5">
-            <h2 id="firstNum">566</h2>
+            <span id="firstNum" class="count percent" data-count="577">
+              0
+            </span>
             <h6 class="pt-2 d-flex align-items-center justify-content-center">
               <i class="far fa-check-circle fa-2x pr-1"></i> Fineshed projects
             </h6>
           </div>
           <div class="col-md-4 py-5">
-            <h2 id="secondNum">723</h2>
+            <span id="secondNum" class="count percent" data-count="891">
+              0
+            </span>
             <h6 class="pt-2 d-flex align-items-center justify-content-center">
               <i class="far fa-calendar-alt fa-2x pr-1"></i> Fineshed projects
             </h6>
           </div>
           <div class="col-md-4 py-5">
-            <h2 id="thirdNum">1000+</h2>
+            <span id="thirdNum" class="count percent" data-count="1000">
+              0
+            </span>
             <h6 class="pt-2 d-flex align-items-center justify-content-center">
               <i class="far fa-list-alt fa-2x pr-1"></i> Fineshed projects
             </h6>
@@ -256,7 +267,7 @@
               </div>
             </div>
           </div>
-          <div id="rightImg" class="col-md-6"></div>
+          <div id="rightImg" class="col-md-6 wow fadeInUp" data-wow-offset="200" data-wow-duration="2s"></div>
         </div>
       </div>
     </section>
@@ -470,16 +481,26 @@
     </div>
   </footer>
 
-
+  <!-- jQueary script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+  <!-- Swiper -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="/script.js"></script>
 
+  <!-- Animate Script -->
+  <script src="/lib/WOW-master/dist/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 
 </html>

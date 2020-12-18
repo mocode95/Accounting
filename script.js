@@ -10,6 +10,9 @@ var swiper = new Swiper(".swiper-container", {
 });
 
 $(document).ready(function () {
+  //Preloader
+
+  $(".loader").fadeOut('slow');
   // Add scrollspy to <body>
   $("body").scrollspy({
     target: ".navbar",
@@ -42,19 +45,52 @@ $(document).ready(function () {
 });
 
 // fixed menu on scroll for desktop
-if ($(window).width() > 992) {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 40) {
-      $('#navbar_top').addClass("fixed-top");
-      // add padding top to show content behind navbar
-      $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
-    } else {
-      $('#navbar_top').removeClass("fixed-top");
-      // remove padding top from body
-      $('body').css('padding-top', '0');
-    }
-  });
-} // end if
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 40) {
+    $('#navbar_top').addClass("fixed-top");
+    // add padding top to show content behind navbar
+    $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+  } else {
+    $('#navbar_top').removeClass("fixed-top");
+    // remove padding top from body
+    $('body').css('padding-top', '0');
+  }
+});
+// end if
+/* Scrollbar */
 
 
-/* Wow js script */
+
+/* Counter */
+var counted = 0;
+$(window).scroll(function () {
+
+  var oTop = $('#firstNum').offset().top - window.innerHeight;
+  if (counted == 0 && $(window).scrollTop() > oTop) {
+    $('.count').each(function () {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 2000,
+          easing: 'swing',
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+    counted = 1;
+  }
+
+});
