@@ -89,7 +89,7 @@ body {
     linear-gradient(rgba(20, 136, 204, 0.80),
       rgba(43, 50, 178, 0.80)),
     /* bottom, image */
-    url(/img/businesspeople-celebrating-success.jpg);
+    url(/img/success.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

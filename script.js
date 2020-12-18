@@ -11,7 +11,6 @@ var swiper = new Swiper(".swiper-container", {
 
 $(document).ready(function () {
   //Preloader
-
   $(".loader").fadeOut('slow');
   // Add scrollspy to <body>
   $("body").scrollspy({
@@ -57,7 +56,6 @@ $(window).scroll(function () {
   }
 });
 // end if
-/* Scrollbar */
 
 
 
